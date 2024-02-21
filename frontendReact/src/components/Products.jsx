@@ -1,6 +1,7 @@
 import { Card, CardBody, Typography, } from "@material-tailwind/react";
 import { useEffect, useState} from "react"
 import Services from "./services.js";
+import HeartToggle from "./HeartToggle.jsx";
 
 const  cardProduct  = Services;
 
@@ -19,24 +20,29 @@ function Product() {
   }, []);
    
   return (
-    <div className="container mx-auto sm:p-4 lg:p-8 bg-customWhite">
-      <p id="products" className="mt-4 text-bold text-4xl text-customCobalt sm:text-[25px]">Productos Estrella</p>
+    <div className="container pt-8 mx-auto sm:p-4 lg:p-8  min-h-screen mt-[150px]">
+      <img src="/frontendReact/src/assets/images/fondomoda.jpg" alt=""></img>
+      <p id="products" className="mt-4 text-bold text-[40px] text-customCobalt sm:text-[10px] text-center">Nuestros productos 'estrella'</p>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {products.map((product, id) => (
-          <Card key={id} className="mt-6 border border-blue-500 bg-gray-200 mt-6 max-w-xs rounded-xl border-solid bg-customCobalt text-customWhite">
+          <Card key={id} className="bg-customWhite  mt-4 max-w-xs rounded-[10px] shadow-x1 ">
             <CardBody className="p-4"> 
+              <>
+                <HeartToggle />
+              </>
+              <img src={product.image} alt={product.image} className="w-48 h-48 mx-auto mb-4" />  
+                <Typography className="text-xl sm:text-lg mb-2 text-center font-bold">
+                    {product.name} 
+                </Typography>
                 
-                <img src={product.image} alt={product.image} className="w-10 h-10 mx-auto mb-4" />   
-                
-                <Typography className="text-xl sm:text-lg mb-2">
-                    {product.marca}
-                </Typography>
-                <Typography className="text-xl sm:text-lg mb-2">
-                {product.size}
-                </Typography>
-                <Typography className="text-sm">
-                {product.price}
-                </Typography>
+                <div className="grid grid-cols-2 text-center">
+                  <Typography className="text-[16px]sm:text-lg mb-2 font-bold"> Talla:  
+                    {product.size}
+                  </Typography>
+                  <Typography className="text-[16px]text-sm font-bold"> Precio: 
+                      {product.price}€
+                  </Typography>
+                </div>
             </CardBody>
           </Card>
         ))}

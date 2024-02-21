@@ -32,6 +32,18 @@
         "locate": "Madrid",
         "price": "10",
         "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+      },
+      
+      {
+        "id": "5",
+        "name": "Abrigo",
+        "image": "/src/img/sansevieria.webp",
+        "gender": "Hombre",
+        "marca" : "Mango",
+        "size"  : "L",
+        "locate": "Madrid",
+        "price": "20",
+        "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
       }
     ]
   }
