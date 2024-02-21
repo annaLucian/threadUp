@@ -2,13 +2,13 @@ import  express  from "express";
 import cors from "cors";
 import dbhackaton from "./database/db.cjs";
 
-import blogRoutes from './routes/routes.js'
+import DbRoutes from './routes/routes.js'
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
-app.use('/inicio', blogRoutes)
+app.use('/inicio', DbRoutes)
 
 try {
     await dbhackaton.authenticate()
