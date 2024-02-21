@@ -10,6 +10,20 @@ export const getAllProducts = async(req, res) => {
         res.json( {message: error.message})
     }
 }
+
+export const getProduct = async(req,res) => {
+    try {
+        const getProduct = TableModel.findAll({
+            where:{
+                id:req.params.id
+            }
+        })
+        res.json(getProduct)
+    } catch (error) {
+        res.json( {message: error.message})
+    }
+}
+
 export const createProduct = async (req, res) => {
     try {
         // Primero, utiliza el middleware uploadImage para manejar la carga de la imagen
@@ -47,5 +61,30 @@ export const createProduct = async (req, res) => {
     }
 };
 
+export const updateProduct = async (req, res) => {
+    try {
+        await TableModel.update(req.body, {
+            where: { id: req.params.id}
+        })
+        res.json({
+            "message":"Producto actualizado correctamente"
+        })
+    } catch (error) {
+        res.json({message: error.message})
+    }
+}
+
+export const deleteProduct = async (req, res) => {
+    try {
+        TableModel.destroy({
+            where: { id:req.params.id}
+        })
+        res.json({
+            "message":"Producto eliminado correctamente"
+        })
+    } catch (error) {
+        res.json({message: error.message})
+    }
+}
 
 
