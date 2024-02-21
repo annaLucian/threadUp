@@ -1,4 +1,5 @@
 import TableModel from "../model/ModelDb.js";
+import { uploadImage } from "../middelware/Upload.js";
 
 
 export const getAllProducts = async(req, res) => {
@@ -9,9 +10,19 @@ export const getAllProducts = async(req, res) => {
         res.json( {message: error.message})
     }
 }
-
 export const createProduct = async (req, res) => {
-    try {       
+    try {
+        // Primero, utiliza el middleware uploadImage para manejar la carga de la imagen
+        uploadImage(req, res, async err => {
+            if (err) {
+                return res.status(400).json({ message: 'Error al cargar la imagen', error: err });
+            }
+
+            // Normaliza la ruta de la imagen utilizando barras normales en lugar de barras invertidas
+            const img = req.file ? req.file.path.replace(/\\/g, '/') : '';
+
+            // Si la imagen se cargó correctamente, procede a crear el producto
+            try {
                 const newProduct = await TableModel.create({                    
                     genero: req.body.genero,
                     productName: req.body.productName,
@@ -20,9 +31,8 @@ export const createProduct = async (req, res) => {
                     color: req.body.color,
                     size: req.body.size,
                     price: req.body.price,
-                    image: req.body.image,
-                    availability: req.body.availability
-                    
+                    image: img, // Utiliza la ruta normalizada de la imagen
+                    availability: req.body.availability                    
                 });
                 res.json({
                     message: "¡Registro creado correctamente!",
@@ -31,10 +41,11 @@ export const createProduct = async (req, res) => {
             } catch (error) {
                 res.status(500).json({ message: error.message });
             }
-     
-            
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
     }
+};
 
 
 
-    
