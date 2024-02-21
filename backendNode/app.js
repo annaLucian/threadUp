@@ -17,11 +17,6 @@ try {
     console.log('El error a la conexion es : ${error}')    
 }
 
-app.get('/', (req,res)=> {
-    res.send('Hola mundo')
-})
-
-
 app.listen(8000, ()=>{
     console.log('server Up running in http://localhost:8000/')
 })
