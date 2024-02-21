@@ -1,3 +1,4 @@
+import CreateForm from "./pages/CreateForm";
 export default function App() {
-  return <div className="text-3xl font-bold underline"><a href="">Formulario</a></div>;
+  return <CreateForm/>
 }
