@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import ErrorPage from "./pages/error/Error.jsx";
+import CreateForm from "./pages/createForm/CreateForm.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "publish-product",
+    element: <CreateForm />,
   },
 ]);
 
