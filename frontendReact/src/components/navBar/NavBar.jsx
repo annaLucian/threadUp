@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import logo from "../../assets/images/logo.svg";
 import gsap from "gsap";
 import "./NavBarStyle.css";
 const NavBar = () => {
@@ -92,7 +93,7 @@ const NavBar = () => {
       <header>
         <div className="container">
           <a href="#!" className="logo">
-            <img src="images/logo.png" alt="Logo" className="logo-img" />
+            <img src={logo} alt="Logo" className="logo-img" />
           </a>
           <div className="nav_actions">
             <div className="input-search-container">
