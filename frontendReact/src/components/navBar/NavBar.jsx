@@ -93,7 +93,7 @@ const NavBar = () => {
       <header>
         <div className="flex px-[12rem] w-full justify-between">
           <a href="#!" className="lremogo">
-            <img src={logo} alt="Logo" className="logo-img w-[6rem]" />
+            <img src={logo} alt="Logo" className="logo-img w-[12rem]" />
           </a>
           <div className="nav_actions">
             <div className="input-search-container h-[2.5rem]">
@@ -103,15 +103,13 @@ const NavBar = () => {
               </div>
             </div>
             <div className="cart-bucket">
-              <ion-icon name="bag-add-outline"></ion-icon>
-              <span>(0) Artículos</span>
+              <span>+</span>
+              <p>Nuevo Producto</p>
             </div>
           </div>
         </div>
       </header>
-      <div className="menu_toggle">
-        <ion-icon name="menu-outline"></ion-icon>
-      </div>
+      <div className="menu_toggle"></div>
     </>
   );
 };
