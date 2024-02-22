@@ -1,0 +1,34 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "Camiseta",
+        "image": "/src/img/sansevieria.webp",
+        "gender": "Mujer",
+        "marca" : "Zara",
+        "locate": "Madrid",
+        "price": "9",
+        "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+      },
+      {
+        "id": "2",
+        "name": "Camisa",
+        "image": "/src/img/sansevieria.webp",
+        "gender": "Hombre",
+        "marca" : "Zara",
+        "locate": "Barcelona",
+        "price": "19",
+        "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+      },
+      {
+        "id": "3",
+        "name": "Falda",
+        "image": "/src/img/sansevieria.webp",
+        "gender": "Mujer",
+        "marca" : "Mango",
+        "locate": "Madrid",
+        "price": "10",
+        "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+      }
+    ]
+  }
