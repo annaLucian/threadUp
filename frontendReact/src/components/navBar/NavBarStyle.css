@@ -1,19 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style-type: none;
+.logo {
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-body {
-  font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }
 
 ::-webkit-scrollbar {
@@ -21,7 +41,7 @@ body {
 }
 
 .container {
-  max-width: 142rem;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -85,10 +105,12 @@ body {
   overflow: hidden;
   text-align: center;
   color: white;
+
 }
 
 .hide .text {
-  font-size: 5rem;
+  font-size: 3rem;
+  line-height: 2rem;
   line-height: 7rem;
   text-align: center;
   transform: translateY(100%);
@@ -99,9 +121,12 @@ body {
 header {
   width: 100%;
   position: absolute;
+  height: 6rem;
   top: 0;
   background: #274c5b;
   transform: translateY(-7rem);
+  display: flex;
+  align-items: center;
 }
 
 .navigation {
@@ -150,8 +175,8 @@ header {
 }
 
 .search-btn {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background: #68a47f;
   color: white;
@@ -166,7 +191,7 @@ header {
 }
 
 .cart-bucket {
-  padding: 0.3rem;
+  padding: 0.6rem;
   border: 0.1rem solid;
   color: white;
   border-radius: 3rem;
@@ -196,6 +221,7 @@ header {
     padding: 3rem 0;
     flex-direction: column;
   }
+
   .logo-img {
     width: 8rem;
   }
@@ -206,9 +232,11 @@ header {
     font-size: 4.5rem;
     line-height: 6rem;
   }
+
   .logo-img {
     width: 8rem;
   }
+
   .input-search-container input {
     width: 6rem;
   }
@@ -218,9 +246,11 @@ header {
   .logo-img {
     width: 8rem;
   }
+
   .nav_menu {
     gap: 2rem;
   }
+
   .nav_link {
     font-size: 1.4rem;
   }

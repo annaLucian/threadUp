@@ -72,37 +72,34 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="popup">
+      <div className="popup hidden">
         <div className="popup-bg-1 popup-bg"></div>
         <div className="popup-bg-2 popup-bg"></div>
         <div className="popup-bg-3 popup-bg"></div>
         <div className="container popup-container">
           <div className="text-area">
             <h1 className="hide">
-              <span className="text">Compra ropa nueva</span>
+              <span className="text">Dale una nueva vida y</span>
             </h1>
             <h1 className="hide">
-              <span className="text">Luce nuevo look</span>
-            </h1>
-            <h1 className="hide">
-              <span className="text">Sé original</span>
+              <span className="text">Exprésate con estilo!!!</span>
             </h1>
           </div>
         </div>
       </div>
-      <header>
-        <div className="container">
-          <a href="#!" className="logo">
-            <img src={logo} alt="Logo" className="logo-img" />
+      <header className="px-[10rem]">
+        <div className="w-full flex items-center justify-between">
+          <a className="logo">
+            <img src={logo} alt="Logo" className="logo-img w-[6rem]" />
           </a>
           <div className="nav_actions">
-            <div className="input-search-container">
+            <div className="input-search-container h-[3rem]">
               <input type="text" name="search" autoComplete="off" />
               <div className="search-btn">
                 <ion-icon name="search-outline"></ion-icon>
               </div>
             </div>
-            <div className="cart-bucket">
+            <div className="cart-bucket h-[3rem]">
               <ion-icon name="bag-add-outline"></ion-icon>
               <span>(0) Artículos</span>
             </div>

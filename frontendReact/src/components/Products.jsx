@@ -19,31 +19,29 @@ function Product() {
   }, []);
 
   return (
-    <div className="container pt-8 mx-auto sm:p-4 lg:p-8  min-h-screen mt-[150px]">
+    <div className="flex flex-col pt-8 mx-auto sm:p-4 p-4 mt-[2rem] px-[14rem] mb-[4rem]">
       <img src="/frontendReact/src/assets/images/fondomoda.jpg" alt=""></img>
-      <p
-        id="products"
-        className="mt-4 text-bold text-[40px] text-customCobalt sm:text-[10px] text-center"
-      >
-        Nuestros productos 'estrella'
+      <p id="products" className="mt-4 font-bold text-[2rem] pb-[4rem]">
+        Nuestros productos estrella
       </p>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {products.map((product, id) => (
           <Card
             key={id}
-            className="bg-customWhite  mt-4 max-w-xs rounded-[10px] shadow-x1 "
+            className="bg-customWhite container-card-product mt-4 max-w-xs rounded-[10px] shadow-x1 "
           >
             <CardBody className="p-4">
               <>
                 <HeartToggle />
               </>
+
               <img
-                src={product.image}
+                src={`https://threadup-iajq.onrender.com/${product.image}`}
                 alt={product.title}
                 className="w-48 h-48 mx-auto mb-4"
               />
               <Typography className="text-xl sm:text-lg mb-2 text-center font-bold">
-                {product.name}
+                {product.productName}
               </Typography>
 
               <div className="grid grid-cols-2 text-center">

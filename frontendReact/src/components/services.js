@@ -1,4 +1,4 @@
-const API = "https://threadup-iajq.onrender.com/inicio";
+export const API = "https://threadup-iajq.onrender.com/inicio";
 
 const cardProduct = {
   getProducts: async () => {
