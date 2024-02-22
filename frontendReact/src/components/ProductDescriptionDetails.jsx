@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import iconHeart from "../assets/icon-heart.svg";
-export default function ProductDescriptionDetails() {
+export default function ProductDescriptionDetails({ product }) {
   return (
     <div
       className="basis-[40%] mt-[4rem] fixed pr-[10rem]"
@@ -8,21 +8,18 @@ export default function ProductDescriptionDetails() {
     >
       <div className="border-b-zinc-200 border-b-[0.1rem]">
         <h1 className="text-[1.5rem] font-bold pb-[1rem]">
-          CAMISA DENIM OVERSIZE
+          {product.productName?.toUpperCase()}
         </h1>
-        <p className="text-[1.8rem] pb-[1rem]">19,99 €</p>
+        <p className="text-[1.8rem] pb-[1rem]">{`${product.price} €`}</p>
       </div>
       <div className="mt-[1rem] pb-[1rem] border-b-zinc-200 border-b-[0.1rem]">
-        <p className="text-[1rem]">COLOR: Kaki</p>
-        <p className="text-[1rem]">TALLA: L</p>
-        <p className="text-[1rem]">MARCA: Bershka</p>
+        <p className="text-[1rem]">COLOR: {product.color}</p>
+        <p className="text-[1rem]">TALLA: {product.size}</p>
+        <p className="text-[1rem]">MARCA: {product.brand}</p>
       </div>
       <div>
         <p className="mt-[2rem] pb-[2rem] text-[0.9rem] border-b-zinc-200 border-b-[0.1rem]">
-          Sobrecamisa denim de corte holgado con cuello camisero. Tiene cierre
-          frontal con botones metálicos. Dispone de dos bolsillos grandes en los
-          laterales de la parte delantera. Está confeccionada en un cómodo y
-          agradable tejido 100% de algodón.
+          {product.description}
         </p>
       </div>
       <div className="mt-[2rem] ">

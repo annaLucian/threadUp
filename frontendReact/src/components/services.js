@@ -8,8 +8,9 @@ const cardProduct = {
   },
 
   getProductById: async (id) => {
-    const response = await fetch(`${API}/${id}`);
-    const product = await response.json();
+    let response = await fetch(`${API}/${id}`);
+    console.log({ id, api: `${API}/${id}`, response });
+    let product = await response.json();
     return product;
   },
 };
