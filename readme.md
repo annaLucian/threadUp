@@ -1,4 +1,4 @@
-![TreadUpLogo](https://i.imgur.com/pAyu6Dt.png) 
+![TreadUpLogo](https://imgur.com/u84zSjm.png) 
 # TreadUp Marketplace 
 ## ¡Dale una nueva vida y exprésate con estilo!
 
