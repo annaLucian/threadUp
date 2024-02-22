@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import logo from "../../assets/images/logo.svg";
 import gsap from "gsap";
 import "./NavBarStyle.css";
 const NavBar = () => {
@@ -90,12 +91,12 @@ const NavBar = () => {
         </div>
       </div>
       <header>
-        <div className="container">
-          <a href="#!" className="logo">
-            <img src="images/logo.png" alt="Logo" className="logo-img" />
+        <div className="flex px-[12rem] w-full justify-between">
+          <a href="#!" className="lremogo">
+            <img src={logo} alt="Logo" className="logo-img w-[6rem]" />
           </a>
           <div className="nav_actions">
-            <div className="input-search-container">
+            <div className="input-search-container h-[2.5rem]">
               <input type="text" name="search" autoComplete="off" />
               <div className="search-btn">
                 <ion-icon name="search-outline"></ion-icon>
