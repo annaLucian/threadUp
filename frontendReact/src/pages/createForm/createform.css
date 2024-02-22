@@ -1,0 +1,70 @@
+
+.formulario{
+    width: 500px; /* Ajusta el tamaño según tus necesidades */
+    height: 600px; /* Asegúrate de que el ancho y la altura sean iguales para formar un cuadrado */
+    padding: 20px; /* Espacio entre los bordes del cuadrado y el contenido del formulario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 30%;
+    background-color: rgba(128, 128, 128, 0.571);
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    width: 65%;
+}
+
+.añade{
+ font-size: 200%;
+ margin-bottom: 7%;
+}
+
+.nombre{
+    position: relative;
+    margin-bottom: -3%;
+}
+
+.talla{
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom:23px;
+}
+
+.precio{
+    width:30% ;
+    margin-top:-12%;
+    margin-right: 35%;
+}
+
+.descripcion{
+    
+        display: inline-block; /* Permite definir ancho y altura */
+        width: 100px; /* Ancho deseado */
+        height: 20px; /* Altura deseada */
+        padding: 10px; /* Espacio interior para que el texto no toque los bordes */
+        line-height: 40px; /* Centra el texto verticalmente si es una sola línea */
+        margin-top: -2%;
+        margin-right: 46%;
+}
+
+.botonenviar{
+    position: relative;
+    margin-top: 13%;
+    border: 3px solid;
+    padding: 1%;
+    
+    
+}
+
+.input{
+    width: 360%;
+}
+
+.imagen{
+position: relative;
+margin-bottom: 4%;
+}
