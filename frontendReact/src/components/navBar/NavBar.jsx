@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import logo from "../../assets/images/logo.svg";
 import gsap from "gsap";
 import "./NavBarStyle.css";
+import Search from "../Search.jsx";
 const NavBar = () => {
   useEffect(() => {
     const tl = gsap.timeline({ default: { ease: "power1.Out" } });
@@ -92,16 +93,11 @@ const NavBar = () => {
       </div>
       <header>
         <div className="flex px-[12rem] w-full justify-between">
-          <a href="#!" className="lremogo">
+          <a href="/" className="lremogo">
             <img src={logo} alt="Logo" className="logo-img w-[12rem]" />
           </a>
           <div className="nav_actions">
-            <div className="input-search-container h-[2.5rem]">
-              <input type="text" name="search" autoComplete="off" />
-              <div className="search-btn">
-                <ion-icon name="search-outline"></ion-icon>
-              </div>
-            </div>
+            <Search />
             <div className="cart-bucket">
               <span>+</span>
               <p>Nuevo Producto</p>

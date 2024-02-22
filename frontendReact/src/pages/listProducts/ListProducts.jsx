@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeartToggle from "../../components/HeartToggle";
 import Services from "../../components/services";
-import NavBar from "../../components/navBar/NavBar.jsx";
-import Footer from "../../components/footer/Footer.jsx";
 import SkeletonCardList from "../../components/placeholder/skeletonCardList.jsx";
 
 export default function ListProducts() {
@@ -13,7 +11,8 @@ export default function ListProducts() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const query = searchParams.get("search");
+  const search = searchParams.get("search");
+  const type = searchParams.get("type");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -26,13 +25,20 @@ export default function ListProducts() {
     fetchProducts();
   }, []);
   const filterProducts = products?.filter((product) => {
-    return product.gender.toLowerCase() === query.toLowerCase();
+    if (type === "form") {
+      return (
+        product.location.toLowerCase().includes(search.toLowerCase()) ||
+        product.productName.toLowerCase().includes(search.toLowerCase())
+      );
+    }
+    return product.gender.toLowerCase() === search.toLowerCase();
   });
+
+  if (filterProducts.length === 0) return <h1 className="pt-[20rem]">hola</h1>;
 
   return (
     <>
-      <NavBar />
-      <h1 className="text-[1.2rem] mt-[12rem] text-center">{`Todos los productos para: ${query}`}</h1>
+      <h1 className="text-[1.2rem] mt-[12rem] text-center">{`Todos los productos para: ${search}`}</h1>
       {!isLoading ? (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]">
           {filterProducts.map((product, index) => (
@@ -76,8 +82,6 @@ export default function ListProducts() {
           <SkeletonCardList />
         </div>
       )}
-
-      <Footer />
     </>
   );
 }
