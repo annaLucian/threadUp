@@ -7,4 +7,19 @@ export default function App() {
     </div>
 
   );
+import Products from "./components/Products.jsx"
+
+
+export default function App() {
+  return (
+  
+  <>
+    <Products />
+  </>
+  )
+  return (
+    <>
+      <FilterCategory />
+    </>
+  );
 }
