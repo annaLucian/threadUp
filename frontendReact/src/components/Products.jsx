@@ -38,7 +38,7 @@ function Product() {
                     <HeartToggle />
                   </>
                   <img
-                    src={`https://threadup-iajq.onrender.com${product.image}`}
+                    src={`https://threadup-iajq.onrender.com/${product.image}`}
                     alt={`imagen de ${product.productName}`}
                     className="w-48 h-48 mx-auto mb-4"
                   />
