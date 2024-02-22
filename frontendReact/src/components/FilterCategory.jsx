@@ -3,7 +3,7 @@ import iconShirt from "../assets/icon-shirt.svg";
 import { Link } from "react-router-dom";
 export default function FilterCategory() {
   return (
-    <section className="flex flex-col justify-center items-center pt-[2.5rem]">
+    <section className="flex flex-col justify-center items-center pt-[12rem]">
       <h1 className="text-[1.8rem] font-bold">¿Qué estás buscando?</h1>
       <span className="text-[1.2rem]">
         Explora nuestra amplia selección de moda para hombres y mujeres
@@ -17,10 +17,10 @@ export default function FilterCategory() {
             <img
               src={iconShirt}
               alt="icono de camisa"
-              className="w-[2.5rem] mb-[0.4rem]"
+              className="w-[3rem] mb-[0.4rem]"
             />
           </picture>
-          <p className="text-[0.8rem]">Hombres</p>
+          <p className="text-[1rem]">Hombres</p>
         </Link>
         <Link
           to="/list-products?search=mujer"
@@ -30,10 +30,10 @@ export default function FilterCategory() {
             <img
               src={iconDress}
               alt="icono de vestido"
-              className="w-[2.5rem] mb-[0.4rem]"
+              className="w-[3rem] mb-[0.4rem]"
             />
           </picture>
-          <p className="text-[0.8rem]">Mujeres</p>
+          <p className="text-[1rem]">Mujeres</p>
         </Link>
       </div>
     </section>
