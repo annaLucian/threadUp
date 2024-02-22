@@ -17,6 +17,8 @@ try {
     console.log('El error a la conexion es : ${error}')    
 }
 
+app.use('/uploads', express.static('uploads'));
+
 app.listen(8000, ()=>{
     console.log('server Up running in http://localhost:8000/')
 })

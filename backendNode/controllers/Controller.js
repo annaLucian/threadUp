@@ -13,12 +13,12 @@ export const getAllProducts = async(req, res) => {
 
 export const getProduct = async(req,res) => {
     try {
-        const getProduct = TableModel.findAll({
+        const getProduct = await TableModel.findAll({
             where:{
                 id:req.params.id
             }
         })
-        res.json(getProduct)
+        res.json(getProduct[0])
     } catch (error) {
         res.json( {message: error.message})
     }
