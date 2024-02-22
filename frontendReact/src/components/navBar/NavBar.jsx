@@ -1,16 +1,78 @@
 import React, { useState } from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
 import "./NavBarStyle.css";
-
 const NavBar = () => {
-  const [isMenuActive, setIsMenuActive] = useState(false);
+  useEffect(() => {
+    const tl = gsap.timeline({ default: { ease: "power1.Out" } });
 
-  const toggleMenu = () => {
-    setIsMenuActive((prevState) => !prevState);
-  };
+    tl.to(".popup-bg", {
+      y: 0,
+      height: "100%",
+      duration: 1,
+      delay: 0.5,
+      stagger: 0.25,
+    })
+      .to(".text-area", {
+        opacity: 1,
+        duration: 1,
+      })
+      .to(".hide", {
+        opacity: 1,
+        duration: 0.5,
+      })
+      .to(".text", {
+        transform: "translateY(0)",
+        duration: 1,
+        delay: 0.2,
+        stagger: 0.5,
+      })
+      .to(".text", {
+        transform: "translateY(100%)",
+        duration: 1,
+        delay: 0.2,
+        stagger: 0.5,
+      })
+      .to(".hide", {
+        opacity: 0,
+        duration: 0.5,
+      })
+      .to(".text-area", {
+        opacity: 0,
+        duration: 0.3,
+      })
+      .to(".popup-bg", {
+        y: 0,
+        height: "0%",
+        duration: 1,
+        delay: 0.5,
+        stagger: 0.25,
+      })
+      .to("header", {
+        y: 0,
+        duration: 0.6,
+      });
+
+    tl.play();
+
+    const menu_toggle = document.querySelector(".menu_toggle");
+    const toggleMenu = () => {
+      const nav_menu = document.querySelector(".nav_menu");
+      nav_menu.classList.toggle("active");
+      nav_menu.classList.contains("active")
+        ? menu_toggle.setAttribute("name", "close-outline")
+        : menu_toggle.setAttribute("name", "menu-outline");
+    };
+    menu_toggle.addEventListener("click", toggleMenu);
+
+    return () => {
+      menu_toggle.removeEventListener("click", toggleMenu);
+    };
+  }, []);
 
   return (
-    <div className="App">
-      <div className={`popup ${isMenuActive ? "active" : ""}`}>
+    <>
+      <div className="popup">
         <div className="popup-bg-1 popup-bg"></div>
         <div className="popup-bg-2 popup-bg"></div>
         <div className="popup-bg-3 popup-bg"></div>
@@ -47,13 +109,10 @@ const NavBar = () => {
           </div>
         </div>
       </header>
-      {/* Evento de clic para el menú */}
-      <div className="menu_toggle" onClick={toggleMenu}>
-        <ion-icon
-          name={isMenuActive ? "close-outline" : "menu-outline"}
-        ></ion-icon>
+      <div className="menu_toggle">
+        <ion-icon name="menu-outline"></ion-icon>
       </div>
-    </div>
+    </>
   );
 };
 
