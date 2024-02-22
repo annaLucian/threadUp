@@ -33,39 +33,39 @@ import './createform.css';
           <h1 className='añade'>añade tu producto</h1>
           <label className='nombre'>
             Nombre:
-            <input  type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
+            <input  className="input" type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
           </label>
           <br />
           <label>
             Categoria:
-            <input type="text" name="categoria" value={formData.categoria} onChange={handleChange} />
+            <input className="input"  type="text" name="categoria" value={formData.categoria} onChange={handleChange} />
           </label>
           <label>
             Genero:
-            <input type="text" name="genero" value={formData.genero} onChange={handleChange} />
+            <input className="input"  type="text" name="genero" value={formData.genero} onChange={handleChange} />
           </label>
           <label>
             Marca:
-            <input type="text" name="marca" value={formData.marca} onChange={handleChange} />
+            <input  className="input" type="text" name="marca" value={formData.marca} onChange={handleChange} />
           </label>
           <label className='imagen'>
             Imagen:
-            <input type="file" name="imagen" value={formData.imagen} onChange={handleChange} />
+            <input className="input"  type="file" name="imagen" value={formData.imagen} onChange={handleChange} />
           </label>
           <label className='talla'>
             Talla:
-            <input type="text" name="talla" value={formData.talla} onChange={handleChange} />
+            <input  className="input" type="text" name="talla" value={formData.talla} onChange={handleChange} />
           </label>
           <label className='precio'>
             Precio:
-            <input type="number" name="precio" value={formData.precio} onChange={handleChange} />
+            <input className="input"  type="number" name="precio" value={formData.precio} onChange={handleChange} />
           </label>
           <label>
             Ubicacion:
-            <input type="text" name="ubicacion" value={formData.ubicacion} onChange={handleChange} />
+            <input className="input"  type="text" name="ubicacion" value={formData.ubicacion} onChange={handleChange} />
           </label>
           <label className='descripcion'>
-            Descripcion:
+            <p className='descrip'>Descripcion:</p>
             <input className="input"type="text" name="descripcion" value={formData.descripcion} onChange={handleChange} />
           </label>
           <br />
