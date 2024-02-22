@@ -29,9 +29,9 @@ export default function ListProducts() {
       <NavBar />
       <h1 className="text-[1.2rem] mt-[12rem] text-center">{`Todos los productos para: ${query}`}</h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]">
-        {filterProducts.map((product, id) => (
+        {filterProducts.map((product, index) => (
           <Card
-            key={id}
+            key={index}
             className="bg-customWhite container-card-product mt-4 max-w-xs rounded-[10px] shadow-x1 "
           >
             <CardBody className="p-4">

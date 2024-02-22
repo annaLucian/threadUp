@@ -1,41 +1,3 @@
-.logo {
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -64,6 +26,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 .popup-bg-1,
@@ -118,6 +81,45 @@
   color: white;
 }
 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
 header {
   width: 100%;
   position: absolute;
@@ -125,7 +127,9 @@ header {
   top: 0;
   background: #274c5b;
   transform: translateY(-7rem);
+  height: 6rem;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -175,8 +179,8 @@ header {
 }
 
 .search-btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background: #68a47f;
   color: white;
@@ -199,6 +203,9 @@ header {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 0.8rem;
 }
 
 .cart-bucket ion-icon {
@@ -223,7 +230,7 @@ header {
   }
 
   .logo-img {
-    width: 8rem;
+    width: 4rem;
   }
 }
 
