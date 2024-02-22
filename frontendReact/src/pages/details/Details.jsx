@@ -20,7 +20,7 @@ export default function Details() {
   return (
     <>
       {product && (
-        <section className="w-[80%]  m-auto flex mt-[8rem] gap-[4rem] h-[90vh] ">
+        <section className="w-[80%]  m-auto flex mt-[10rem] gap-[4rem] h-[90vh]  my-[4rem]">
           <ProductImageDetails product={product} />
           <ProductDescriptionDetails product={product} />
         </section>

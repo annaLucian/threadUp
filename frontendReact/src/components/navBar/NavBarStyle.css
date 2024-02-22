@@ -164,11 +164,13 @@ header {
   background: #fdf8f8;
   padding: 0.3rem;
   border-radius: 2rem;
+
 }
 
 .input-search-container input {
-  font-size: 1.8rem;
+  font-size: 1rem;
   outline: none;
+  width: 18rem;
   border: none;
   background: transparent;
   padding: 0 0.8rem;

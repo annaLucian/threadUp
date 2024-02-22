@@ -10,10 +10,14 @@ const Footer = () => {
       <a href="#" className="cursor-pointer">
         <i className="fas fa-heart footer-icons"></i>
       </a>
-      <a href="#" className="cursor-pointer">
+      <a
+        href="https://mail.google.com"
+        className="cursor-pointer"
+        target="_blank"
+      >
         <i className="fas fa-envelope footer-icons"></i>
       </a>
-      <a href="#" className="cursor-pointer">
+      <a className="cursor-pointer">
         <i className="fas fa-user footer-icons"></i>
       </a>
     </footer>
