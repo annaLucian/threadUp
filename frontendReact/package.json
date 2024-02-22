@@ -9,9 +9,12 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
+    "api": "npx json-server server/db.json",
     "server": "json-server ./api/products.json --port 8000"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.9",
+    "gsap": "^3.12.5",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

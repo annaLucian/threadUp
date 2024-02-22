@@ -4,8 +4,9 @@
         "id": "1",
         "name": "Camiseta",
         "image": "/src/img/sansevieria.webp",
-        "gender": "Mujer",
+        "genero": "Mujer",
         "marca" : "Zara",
+        "size"  : "XL",
         "locate": "Madrid",
         "price": "9",
         "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
@@ -14,8 +15,9 @@
         "id": "2",
         "name": "Camisa",
         "image": "/src/img/sansevieria.webp",
-        "gender": "Hombre",
+        "genero": "Hombre",
         "marca" : "Zara",
+        "size"  : "L",
         "locate": "Barcelona",
         "price": "19",
         "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
@@ -24,10 +26,23 @@
         "id": "3",
         "name": "Falda",
         "image": "/src/img/sansevieria.webp",
-        "gender": "Mujer",
+        "genero": "Mujer",
         "marca" : "Mango",
+        "size"  : "M",
         "locate": "Madrid",
         "price": "10",
+        "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+      },
+      
+      {
+        "id": "5",
+        "name": "Abrigo",
+        "image": "/src/img/sansevieria.webp",
+        "gender": "Hombre",
+        "marca" : "Mango",
+        "size"  : "L",
+        "locate": "Madrid",
+        "price": "20",
         "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
       }
     ]
