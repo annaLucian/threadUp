@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import "./NavBarStyle.css";
 const NavBar = () => {
