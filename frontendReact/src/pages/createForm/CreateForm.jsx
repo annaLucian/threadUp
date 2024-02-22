@@ -28,7 +28,7 @@ import './createform.css';
       };
     
       return (
-        <div classname="contenedor">
+        <div className="contenedor">
         <form className="formulario" onSubmit={handleSubmit}>
           <h1 className='añade'>añade tu producto</h1>
           <label className='nombre'>
@@ -43,6 +43,10 @@ import './createform.css';
           <label>
             Genero:
             <input type="text" name="genero" value={formData.genero} onChange={handleChange} />
+          </label>
+          <label>
+            Marca:
+            <input type="text" name="marca" value={formData.marca} onChange={handleChange} />
           </label>
           <label className='imagen'>
             Imagen:
@@ -62,7 +66,7 @@ import './createform.css';
           </label>
           <label className='descripcion'>
             Descripcion:
-            <input className="input"type="text" name="description" value={formData.descripcion} onChange={handleChange} />
+            <input className="input"type="text" name="descripcion" value={formData.descripcion} onChange={handleChange} />
           </label>
           <br />
           <button className="botonenviar"type="submit">Enviar</button>

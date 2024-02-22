@@ -3,7 +3,6 @@
     width: 500px; /* Ajusta el tamaño según tus necesidades */
     height: 600px; /* Asegúrate de que el ancho y la altura sean iguales para formar un cuadrado */
     padding: 20px; /* Espacio entre los bordes del cuadrado y el contenido del formulario */
-    border: 5px solid #000; /* Ajusta el color y el estilo del borde según prefieras */
     display: flex;
     justify-content: center;
     align-items: center;

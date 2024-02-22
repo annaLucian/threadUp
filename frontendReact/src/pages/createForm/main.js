@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const ubicacion = document.getElementById('ubicacion').value;
         const descripcion = document.getElementById('descripcion').value;
 
- 
 })
 
        // Puedes hacer algo con los datos aquí, como imprimirlos en la consola
