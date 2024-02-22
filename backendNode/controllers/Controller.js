@@ -38,7 +38,7 @@ export const createProduct = async (req, res) => {
             // Si la imagen se cargó correctamente, procede a crear el producto
             try {
                 const newProduct = await TableModel.create({                    
-                    genero: req.body.genero,
+                    gender: req.body.gender,
                     productName: req.body.productName,
                     brand: req.body.brand,
                     type: req.body.type,
@@ -46,7 +46,8 @@ export const createProduct = async (req, res) => {
                     size: req.body.size,
                     price: req.body.price,
                     image: img, // Utiliza la ruta normalizada de la imagen
-                    availability: req.body.availability                    
+                    availability: req.body.availability,                    
+                    description: req.body.description
                 });
                 res.json({
                     message: "¡Registro creado correctamente!",
