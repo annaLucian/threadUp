@@ -5,8 +5,6 @@ export default function App() {
     <div>
       <h1 className="text-3xl font-bold underline">soy la home luca</h1>
     </div>
-    <>
-      <FilterCategory />
-    </>
+
   );
 }

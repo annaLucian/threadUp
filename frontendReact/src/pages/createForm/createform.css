@@ -32,6 +32,7 @@ label{
 .talla{
     width: 30%;
     margin-left: 35%;
+    margin-bottom:23px;
 }
 
 .precio{
@@ -62,4 +63,9 @@ label{
 
 .input{
     width: 360%;
+}
+
+.imagen{
+position: relative;
+margin-bottom: 4%;
 }

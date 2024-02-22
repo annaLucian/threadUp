@@ -44,9 +44,9 @@ import './createform.css';
             Genero:
             <input type="text" name="genero" value={formData.genero} onChange={handleChange} />
           </label>
-          <label>
+          <label className='imagen'>
             Imagen:
-            <input type="url" name="imagen" value={formData.imagen} onChange={handleChange} />
+            <input type="file" name="imagen" value={formData.imagen} onChange={handleChange} />
           </label>
           <label className='talla'>
             Talla:
@@ -71,5 +71,4 @@ import './createform.css';
       );
     }
     export default CreateForm;
-
     

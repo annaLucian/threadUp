@@ -5,16 +5,29 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Evitar que el formulario se envíe de forma convencional
 
         // Obtener datos del formulario
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var phone = document.getElementById('phone').value;
+        const name = document.getElementById('name').value;
+        const categoria = document.getElementById('categoria').value;
+        const genero = document.getElementById('genero').value;
+        const imagen = document.getElementById('imagen').value;
+        const talla = document.getElementById('talla').value;
+        const precio = document.getElementById('precio').value;
+        const ubicacion = document.getElementById('ubicacion').value;
+        const descripcion = document.getElementById('descripcion').value;
 
-        // Puedes hacer algo con los datos aquí, como imprimirlos en la consola
-        console.log('name', name);
-        console.log('email', email);
-        console.log('phone', phone);
+ 
+})
+
+       // Puedes hacer algo con los datos aquí, como imprimirlos en la consola
+        console.log('nombre', name);
+        console.log('categoria', categoria);
+        console.log('genero',  genero);
+        console.log('imagen', imagen );
+        console.log('talla', talla);
+        console.log('precio', precio);
+        console.log('ubicacion', ubicacion);
+        console.log('descripcion', descripcion);
     });
-});
+
 
 // inicio form
 function send() { 
