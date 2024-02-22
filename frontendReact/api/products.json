@@ -6,6 +6,7 @@
         "image": "/src/img/sansevieria.webp",
         "genero": "Mujer",
         "marca" : "Zara",
+        "size"  : "XL",
         "locate": "Madrid",
         "price": "9",
         "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
@@ -16,6 +17,7 @@
         "image": "/src/img/sansevieria.webp",
         "genero": "Hombre",
         "marca" : "Zara",
+        "size"  : "L",
         "locate": "Barcelona",
         "price": "19",
         "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
@@ -26,8 +28,21 @@
         "image": "/src/img/sansevieria.webp",
         "genero": "Mujer",
         "marca" : "Mango",
+        "size"  : "M",
         "locate": "Madrid",
         "price": "10",
+        "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
+      },
+      
+      {
+        "id": "5",
+        "name": "Abrigo",
+        "image": "/src/img/sansevieria.webp",
+        "gender": "Hombre",
+        "marca" : "Mango",
+        "size"  : "L",
+        "locate": "Madrid",
+        "price": "20",
         "description": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX."
       }
     ]
