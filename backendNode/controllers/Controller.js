@@ -47,7 +47,8 @@ export const createProduct = async (req, res) => {
                     price: req.body.price,
                     image: img, // Utiliza la ruta normalizada de la imagen
                     availability: req.body.availability,                    
-                    description: req.body.description
+                    description: req.body.description,
+                    location: req.body.location
                 });
                 res.json({
                     message: "¡Registro creado correctamente!",

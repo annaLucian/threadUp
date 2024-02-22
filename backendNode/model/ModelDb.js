@@ -12,7 +12,8 @@ const TableModel= dbhackaton.define('products', {
     price: {type:DataTypes.NUMBER},
     image:{type:DataTypes.STRING},
     availability:{type:DataTypes.BOOLEAN},
-    description:{type:DataTypes.STRING}
+    description:{type:DataTypes.STRING},
+    location:{type:DataTypes.STRING}
 })
 
 export default TableModel
