@@ -7,7 +7,7 @@ import HeartToggle from "../../components/HeartToggle";
 import Services from "../../components/services";
 import NotFound from "../../components/NotFound.jsx";
 import SkeletonCardList from "../../components/placeholder/skeletonCardList.jsx";
-
+import { SliderComponent } from "../../components/slider/Slider.jsx";
 export default function ListProducts() {
   let [searchParams] = useSearchParams();
   const [products, setProducts] = useState([]);
@@ -36,10 +36,12 @@ export default function ListProducts() {
     return product.gender.toLowerCase() === search.toLowerCase();
   });
 
-  if (filterProducts.length === 0) return <NotFound search={search} />;
+  if (filterProducts.length === 0 && !isLoading)
+    return <NotFound search={search} />;
 
   return (
     <>
+      {/* <SliderComponent /> */}
       <h1 className="text-[1.2rem] mt-[12rem] text-center">{`Todos los productos para: ${search}`}</h1>
       {!isLoading ? (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]">
