@@ -24,6 +24,7 @@ export default function FilterCategory() {
         </Link>
         <Link
           to="/list-products?search=mujer"
+          data-testid="btnMujer"
           className="text-center flex flex-col items-center p-[0.5rem] hover:bg-[#efefef]"
         >
           <picture>

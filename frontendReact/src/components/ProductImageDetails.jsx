@@ -16,7 +16,7 @@ export default function ProductImageDetails({ product }) {
   }, []);
 
   return (
-    <div className="relative basis-[50%]">
+    <div className="relative basis-[50%] bg-[#e6e7e9] rounded-lg  flex justify-center items-center">
       <Link to="/" className="absolute top-[2rem] left-[2rem] z-10">
         <img src={iconBack} alt="icono de regreso" className="w-[1rem] " />
       </Link>
@@ -24,7 +24,7 @@ export default function ProductImageDetails({ product }) {
       {statusErrorImage ? (
         <div
           role="status"
-          class="flex items-center justify-center h-[40rem] w-[40rem] bg-[#d2d2d2] rounded-lg animate-pulse bg-gray-700"
+          class="flex items-center justify-center h-[40rem] w-[40rem] rounded-lg animate-pulse bg-gray-700"
         >
           <svg
             class="w-[6rem] h-[6rem] text-gray-200 dark:text-gray-600"
@@ -36,7 +36,6 @@ export default function ProductImageDetails({ product }) {
             <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
             <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM9 13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2Zm4 .382a1 1 0 0 1-1.447.894L10 13v-2l1.553-1.276a1 1 0 0 1 1.447.894v2.764Z" />
           </svg>
-          <span class="sr-only">Loading...</span>
         </div>
       ) : (
         <picture>

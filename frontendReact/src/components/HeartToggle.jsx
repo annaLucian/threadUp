@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import heart from "../assets/images/heart.png";
+import React, { useState } from "react";
+import Heart from "../assets/images/heart.png";
 
 const HeartToggle = () => {
   const [isRed, setIsRed] = useState(false);
@@ -9,14 +9,15 @@ const HeartToggle = () => {
   };
 
   const redFilterClass = "hue-rotate-90 saturate-200";
-  const defaultClass = "w-6 h-6 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer";
+  const defaultClass =
+    "w-6 h-6 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer";
 
   return (
-    <div className="flex justify-end"> 
+    <div className="flex justify-end">
       <img
-        src={heart}
+        src={Heart}
         alt="heartToggle"
-        className={`${defaultClass} ${isRed ? redFilterClass : ''}`}
+        className={`${defaultClass} ${isRed ? redFilterClass : ""}`}
         onClick={toggleColor}
       />
     </div>

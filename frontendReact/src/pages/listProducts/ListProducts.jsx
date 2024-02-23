@@ -2,10 +2,10 @@ import { useSearchParams } from "react-router-dom";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import LocationSvg from "../../components/svg/Location.jsx";
 import HeartToggle from "../../components/HeartToggle";
 import Services from "../../components/services";
-import NavBar from "../../components/navBar/NavBar.jsx";
-import Footer from "../../components/footer/Footer.jsx";
+import NotFound from "../../components/NotFound.jsx";
 import SkeletonCardList from "../../components/placeholder/skeletonCardList.jsx";
 
 export default function ListProducts() {
@@ -13,7 +13,8 @@ export default function ListProducts() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const query = searchParams.get("search");
+  const search = searchParams.get("search");
+  const type = searchParams.get("type");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -26,42 +27,55 @@ export default function ListProducts() {
     fetchProducts();
   }, []);
   const filterProducts = products?.filter((product) => {
-    return product.gender.toLowerCase() === query.toLowerCase();
+    if (type === "form") {
+      return (
+        product.location.toLowerCase().includes(search.toLowerCase()) ||
+        product.productName.toLowerCase().includes(search.toLowerCase())
+      );
+    }
+    return product.gender.toLowerCase() === search.toLowerCase();
   });
+
+  if (filterProducts.length === 0) return <NotFound search={search} />;
 
   return (
     <>
-      <NavBar />
-      <h1 className="text-[1.2rem] mt-[12rem] text-center">{`Todos los productos para: ${query}`}</h1>
+      <h1 className="text-[1.2rem] mt-[12rem] text-center">{`Todos los productos para: ${search}`}</h1>
       {!isLoading ? (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]">
           {filterProducts.map((product, index) => (
             <Link to={`/details-product/?id=${product.id}`} key={index}>
               <Card
                 key={index}
-                className="bg-customWhite container-card-product mt-4 max-w-xs rounded-[10px] shadow-x1 "
+                className="container-products bg-customWhite  mt-4 max-w-[25rem] rounded-[10px] shadow-x1 "
               >
-                <CardBody className="p-4">
+                <CardBody className="p-8">
                   <>
                     <HeartToggle />
                   </>
-
                   <img
                     src={`https://threadup-iajq.onrender.com/${product.image}`}
-                    alt={product.title}
+                    alt={`imagen de ${product.productName}`}
                     className="w-48 h-48 mx-auto mb-4"
                   />
-                  <Typography className="text-xl sm:text-lg mb-2 text-center font-bold">
+                  <Typography className="text-[1.1rem] mb-[0.5rem]  font-bold text-[#274c5b]">
                     {product.productName}
                   </Typography>
-                  <div className="grid grid-cols-2 text-center mt-[1.2rem]">
+
+                  <Typography className="flex items-center text-[1rem] mb-2 font-bold gap-[0.5rem]">
+                    <div className="w-[1.5rem]">
+                      <LocationSvg />
+                    </div>
+
+                    {product.location}
+                  </Typography>
+
+                  <div className="grid grid-cols-2 ">
                     <Typography className="text-[1rem] mb-2 font-bold">
-                      {" "}
                       Talla:
                       {product.size}
                     </Typography>
-                    <Typography className="text-[1rem]  font-bold">
-                      {" "}
+                    <Typography className="text-[1rem] font-bold">
                       Precio:
                       {product.price}€
                     </Typography>
@@ -72,12 +86,13 @@ export default function ListProducts() {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]">
+        <div
+          data-testid="skeleton-card-list"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]"
+        >
           <SkeletonCardList />
         </div>
       )}
-
-      <Footer />
     </>
   );
 }

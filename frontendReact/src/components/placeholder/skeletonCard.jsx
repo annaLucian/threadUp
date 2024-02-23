@@ -2,11 +2,11 @@ export default function SkeletonCard() {
   return (
     <div
       role="status"
-      class="bg-[#efefef]  w-[15rem] h-[20rem] p-4 rounded shadow animate-pulse md:p-6 dark:border-gray-700 mb-[2rem]"
+      className="bg-[#efefef]  w-[15rem] h-[20rem] p-4 rounded shadow animate-pulse md:p-6 dark:border-gray-700 mb-[6rem]"
     >
-      <div class="flex items-center justify-center h-48 mb-[3rem] bg-gray-300 rounded dark:bg-gray-700">
+      <div className="flex items-center justify-center h-48 mb-[3rem] bg-gray-300 rounded dark:bg-gray-700">
         <svg
-          class="w-[6rem] h-[6rem] text-gray-200 dark:text-gray-600"
+          className="w-[6rem] h-[6rem] text-gray-200 dark:text-gray-600"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -16,10 +16,10 @@ export default function SkeletonCard() {
           <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
         </svg>
       </div>
-      <div class="bg-[#3a3a3a] h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+      <div className="bg-[#3a3a3a] h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
       <div className="flex gap-[1rem]">
-        <div class="bg-[#3a3a3a] w-[50%] h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-        <div class="bg-[#3a3a3a]  w-[50%] h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+        <div className="bg-[#3a3a3a] w-[50%] h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+        <div className="bg-[#3a3a3a]  w-[50%] h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
       </div>
     </div>
   );
