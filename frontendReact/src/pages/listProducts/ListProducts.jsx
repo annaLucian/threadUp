@@ -86,7 +86,10 @@ export default function ListProducts() {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]">
+        <div
+          data-testid="skeleton-card-list"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-[2rem] px-[10rem] mb-[5rem]"
+        >
           <SkeletonCardList />
         </div>
       )}

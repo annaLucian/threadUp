@@ -29,11 +29,12 @@ function Product() {
       {!isLoading ? (
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product, index) => (
-            <Link to={`/details-product/?id=${product.id}`} key={index}>
-              <Card
-                key={index}
-                className="container-products bg-customWhite  mt-4 max-w-[25rem] rounded-[10px] shadow-x1 "
-              >
+            <Link
+              data-testid={`cardProduct-${product.id}`}
+              to={`/details-product/?id=${product.id}`}
+              key={product.id}
+            >
+              <Card className="container-products bg-customWhite  mt-4 max-w-[25rem] rounded-[10px] shadow-x1 ">
                 <CardBody className="p-8">
                   <>
                     <HeartToggle />
@@ -71,7 +72,10 @@ function Product() {
           ))}
         </div>
       ) : (
-        <section className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <section
+          data-testid="skeleton"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           <SkeletonCardList />
         </section>
       )}

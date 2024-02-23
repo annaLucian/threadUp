@@ -10,7 +10,11 @@ export default function Search() {
     navigate(`/list-products/?search=${value}&type=form`);
   }
   return (
-    <form className="input-search-container h-[2.5rem]" onSubmit={handleSubmit}>
+    <form
+      data-testid="searchForm"
+      className="input-search-container h-[2.5rem]"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         name="search"

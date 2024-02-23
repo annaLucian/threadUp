@@ -94,7 +94,12 @@ const NavBar = () => {
       <header>
         <div className="flex px-[12rem] w-full justify-between">
           <a href="/" className="lremogo">
-            <img src={logo} alt="Logo" className="logo-img w-[12rem]" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="logo-img w-[12rem]"
+              data-testid="logo"
+            />
           </a>
           <div className="nav_actions">
             <Search />
