@@ -34,7 +34,6 @@ const renderWithRouter = () => (
 
 describe("Product Component", () => {
   it("should render all products", async () => {
-    act(() => jest.advanceTimersByTime(1000));
     render(renderWithRouter());
 
     await screen.findByText("Nuestros productos estrella");
@@ -44,7 +43,6 @@ describe("Product Component", () => {
   });
 
   it("should render a skeleton when the data is fetching", async () => {
-    act(() => jest.advanceTimersByTime(1000));
     render(renderWithRouter());
 
     expect(await screen.getByTestId("skeleton")).toBeInTheDocument();
